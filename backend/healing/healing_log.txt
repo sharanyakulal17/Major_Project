@@ -528,3 +528,90 @@
 2026-09-02 03:51:42.987778 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: Root Cause Analysis: Severe Memory exhaustion and RAM leakage. | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
 2026-09-02 03:51:43.511828 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: run rm -rf / ; cat /etc/passwd | Action: SAFE_FALLBACK_RESTART | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
 2026-09-02 03:51:44.036522 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: An unexpected transient anomaly pattern was observed. | Action: SAFE_FALLBACK_RESTART | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 02:58:21.748072 | Normal | No Action Required | Action: NO_ACTION_REQUIRED | Verification: SKIPPED | Telemetry: HEALTHY
+2026-10-13 02:58:22.274128 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: Root Cause Analysis: High CPU saturation and thread starvation. | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 02:58:22.798322 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: Root Cause Analysis: Severe Memory exhaustion and RAM leakage. | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 02:58:23.325910 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: run rm -rf / ; cat /etc/passwd | Action: SAFE_FALLBACK_RESTART | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 02:58:23.852170 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: An unexpected transient anomaly pattern was observed. | Action: SAFE_FALLBACK_RESTART | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 02:58:27.275750 | Normal | No Action Required | Action: NO_ACTION_REQUIRED | Verification: SKIPPED | Telemetry: HEALTHY
+2026-10-13 02:58:28.957141 | Anomaly | Remediation Failed: Post-remediation health verification failed: Telemetry row is stale (95.0s old) | RCA: CPU Spike | Action: RESTART_MONITORING_SERVICE | Verification: FAILED | Telemetry: STALE/UNAVAILABLE | Reason: Telemetry row is stale (95.0s old)
+2026-10-13 02:58:30.056190 | Anomaly | Remediation Failed: Post-remediation health verification failed: Telemetry file unreadable or corrupt | RCA: Disk Failure | Action: SAFE_FALLBACK_RESTART | Verification: FAILED | Telemetry: STALE/UNAVAILABLE | Reason: Telemetry file unreadable or corrupt
+2026-10-13 02:58:31.148814 | Anomaly | Remediation Failed: Post-remediation health verification failed: PID 99999 is not alive in process table | RCA: Collector Deadlock | Action: RESTART_MONITORING_SERVICE | Verification: FAILED | Telemetry: STALE/UNAVAILABLE | Reason: PID 99999 is not alive in process table
+2026-10-13 02:58:31.586023 | Anomaly | Monitoring Service Restarted (PID: 8888) | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: HEALTHY
+2026-10-13 02:58:31.662284 | Normal | No Action Required | Action: NO_ACTION_REQUIRED | Verification: SKIPPED | Telemetry: HEALTHY
+2026-10-13 02:58:32.180501 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: Root Cause Analysis: High CPU saturation and thread starvation. | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 02:58:32.701492 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: Root Cause Analysis: Severe Memory exhaustion and RAM leakage. | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 02:58:33.222023 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: run rm -rf / ; cat /etc/passwd | Action: SAFE_FALLBACK_RESTART | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 02:58:33.747646 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: An unexpected transient anomaly pattern was observed. | Action: SAFE_FALLBACK_RESTART | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 02:58:37.307429 | Anomaly | Remediation Failed: Post-remediation health verification failed: Stale data | Action: RESTART_MONITORING_SERVICE | Verification: FAILED | Telemetry: STALE/UNAVAILABLE | Reason: Stale data
+2026-10-13 02:59:19.860522 | Anomaly | Remediation Failed: Post-remediation health verification failed: Stale data | Action: RESTART_MONITORING_SERVICE | Verification: FAILED | Telemetry: STALE/UNAVAILABLE | Reason: Stale data
+2026-10-13 02:59:19.920018 | Normal | No Action Required | Action: NO_ACTION_REQUIRED | Verification: SKIPPED | Telemetry: HEALTHY
+2026-10-13 02:59:20.445330 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: Root Cause Analysis: High CPU saturation and thread starvation. | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 02:59:20.970446 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: Root Cause Analysis: Severe Memory exhaustion and RAM leakage. | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 02:59:21.494283 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: run rm -rf / ; cat /etc/passwd | Action: SAFE_FALLBACK_RESTART | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 02:59:22.021236 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: An unexpected transient anomaly pattern was observed. | Action: SAFE_FALLBACK_RESTART | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 02:59:22.628469 | Normal | No Action Required | Action: NO_ACTION_REQUIRED | Verification: SKIPPED | Telemetry: HEALTHY
+2026-10-13 02:59:24.276358 | Anomaly | Remediation Failed: Post-remediation health verification failed: Telemetry row is stale (95.0s old) | RCA: CPU Spike | Action: RESTART_MONITORING_SERVICE | Verification: FAILED | Telemetry: STALE/UNAVAILABLE | Reason: Telemetry row is stale (95.0s old)
+2026-10-13 02:59:25.373199 | Anomaly | Remediation Failed: Post-remediation health verification failed: Telemetry file unreadable or corrupt | RCA: Disk Failure | Action: SAFE_FALLBACK_RESTART | Verification: FAILED | Telemetry: STALE/UNAVAILABLE | Reason: Telemetry file unreadable or corrupt
+2026-10-13 02:59:26.485757 | Anomaly | Remediation Failed: Post-remediation health verification failed: PID 99999 is not alive in process table | RCA: Collector Deadlock | Action: RESTART_MONITORING_SERVICE | Verification: FAILED | Telemetry: STALE/UNAVAILABLE | Reason: PID 99999 is not alive in process table
+2026-10-13 02:59:26.922636 | Anomaly | Monitoring Service Restarted (PID: 8888) | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: HEALTHY
+2026-10-13 02:59:27.005913 | Normal | No Action Required | Action: NO_ACTION_REQUIRED | Verification: SKIPPED | Telemetry: HEALTHY
+2026-10-13 02:59:27.527914 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: Root Cause Analysis: High CPU saturation and thread starvation. | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 02:59:28.045933 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: Root Cause Analysis: Severe Memory exhaustion and RAM leakage. | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 02:59:28.564397 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: run rm -rf / ; cat /etc/passwd | Action: SAFE_FALLBACK_RESTART | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 02:59:29.088569 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: An unexpected transient anomaly pattern was observed. | Action: SAFE_FALLBACK_RESTART | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 02:59:32 | Fault Injected: CPU_SPIKE | Node(s): VM-03, VM-06 | Metric Trigger: CPU Throttling & Spike (>90%)
+2026-10-13 02:59:32 | Fault Injected: MEMORY_LEAK | Node(s): VM-02, VM-03, VM-06, VM-08 | Metric Trigger: Critical Memory Leak (96%)
+2026-10-13 02:59:32 | Fault Injected: NETWORK_LATENCY | Node(s): VM-01, VM-02, VM-03, VM-06, VM-07, VM-08 | Metric Trigger: Network Latency Degraded (400ms)
+2026-10-13 02:59:32 | Fault Injected: CRITICAL_CRASH | Node(s): VM-01, VM-02, VM-03, VM-06, VM-07, VM-08, VM-09 | Metric Trigger: CRITICAL MODULE CRASH (Node Outage)
+2026-10-13 02:59:57 | Fault Injected: CPU_SPIKE | Node(s): VM-03, VM-06 | Metric Trigger: CPU Throttling & Spike (>90%)
+2026-10-13 02:59:57 | Fault Injected: MEMORY_LEAK | Node(s): VM-02, VM-03, VM-06, VM-08 | Metric Trigger: Critical Memory Leak (96%)
+2026-10-13 02:59:57 | Fault Injected: NETWORK_LATENCY | Node(s): VM-01, VM-02, VM-03, VM-06, VM-07, VM-08 | Metric Trigger: Network Latency Degraded (400ms)
+2026-10-13 02:59:57 | Fault Injected: CRITICAL_CRASH | Node(s): VM-01, VM-02, VM-03, VM-06, VM-07, VM-08, VM-09 | Metric Trigger: CRITICAL MODULE CRASH (Node Outage)
+2026-10-13 03:02:39 | Fault Injected: CPU_SPIKE | Node(s): VM-03, VM-06 | Metric Trigger: CPU Throttling & Spike (>90%)
+2026-10-13 03:02:39 | Fault Injected: MEMORY_LEAK | Node(s): VM-02, VM-03, VM-06, VM-08 | Metric Trigger: Critical Memory Leak (96%)
+2026-10-13 03:02:39 | Fault Injected: NETWORK_LATENCY | Node(s): VM-01, VM-02, VM-03, VM-06, VM-07, VM-08 | Metric Trigger: Network Latency Degraded (400ms)
+2026-10-13 03:02:39 | Fault Injected: CRITICAL_CRASH | Node(s): VM-01, VM-02, VM-03, VM-06, VM-07, VM-08, VM-09 | Metric Trigger: CRITICAL MODULE CRASH (Node Outage)
+2026-10-13 03:02:39.849831 | Normal | No Action Required | Action: NO_ACTION_REQUIRED | Verification: SKIPPED | Telemetry: HEALTHY
+2026-10-13 03:02:57.345187 | Normal | No Action Required | Action: NO_ACTION_REQUIRED | Verification: SKIPPED | Telemetry: HEALTHY
+2026-10-13 03:02:57.866912 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: Root Cause Analysis: High CPU saturation and thread starvation. | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 03:02:58.390502 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: Root Cause Analysis: Severe Memory exhaustion and RAM leakage. | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 03:02:58.904587 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: run rm -rf / ; cat /etc/passwd | Action: SAFE_FALLBACK_RESTART | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 03:02:59.428691 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: An unexpected transient anomaly pattern was observed. | Action: SAFE_FALLBACK_RESTART | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 03:03:02.824113 | Normal | No Action Required | Action: NO_ACTION_REQUIRED | Verification: SKIPPED | Telemetry: HEALTHY
+2026-10-13 03:03:04.487875 | Anomaly | Remediation Failed: Post-remediation health verification failed: Telemetry row is stale (95.0s old) | RCA: CPU Spike | Action: RESTART_MONITORING_SERVICE | Verification: FAILED | Telemetry: STALE/UNAVAILABLE | Reason: Telemetry row is stale (95.0s old)
+2026-10-13 03:03:05.562606 | Anomaly | Remediation Failed: Post-remediation health verification failed: Telemetry file unreadable or corrupt | RCA: Disk Failure | Action: SAFE_FALLBACK_RESTART | Verification: FAILED | Telemetry: STALE/UNAVAILABLE | Reason: Telemetry file unreadable or corrupt
+2026-10-13 03:03:06.646804 | Anomaly | Remediation Failed: Post-remediation health verification failed: PID 99999 is not alive in process table | RCA: Collector Deadlock | Action: RESTART_MONITORING_SERVICE | Verification: FAILED | Telemetry: STALE/UNAVAILABLE | Reason: PID 99999 is not alive in process table
+2026-10-13 03:03:07.085750 | Anomaly | Monitoring Service Restarted (PID: 8888) | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: HEALTHY
+2026-10-13 03:03:07.163203 | Normal | No Action Required | Action: NO_ACTION_REQUIRED | Verification: SKIPPED | Telemetry: HEALTHY
+2026-10-13 03:03:07.683569 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: Root Cause Analysis: High CPU saturation and thread starvation. | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 03:03:08.202108 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: Root Cause Analysis: Severe Memory exhaustion and RAM leakage. | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 03:03:08.727723 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: run rm -rf / ; cat /etc/passwd | Action: SAFE_FALLBACK_RESTART | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 03:03:09.245448 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: An unexpected transient anomaly pattern was observed. | Action: SAFE_FALLBACK_RESTART | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 03:03:12.803379 | Anomaly | Remediation Failed: Post-remediation health verification failed: Stale data | Action: RESTART_MONITORING_SERVICE | Verification: FAILED | Telemetry: STALE/UNAVAILABLE | Reason: Stale data
+2026-10-13 03:03:12.864520 | Normal | No Action Required | Action: NO_ACTION_REQUIRED | Verification: SKIPPED | Telemetry: HEALTHY
+2026-10-13 03:03:13.386598 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: Root Cause Analysis: High CPU saturation and thread starvation. | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 03:03:13.904389 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: Root Cause Analysis: Severe Memory exhaustion and RAM leakage. | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 03:03:14.427576 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: run rm -rf / ; cat /etc/passwd | Action: SAFE_FALLBACK_RESTART | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 03:03:14.945406 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: An unexpected transient anomaly pattern was observed. | Action: SAFE_FALLBACK_RESTART | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 03:03:15.570924 | Normal | No Action Required | Action: NO_ACTION_REQUIRED | Verification: SKIPPED | Telemetry: HEALTHY
+2026-10-13 03:03:17.211643 | Anomaly | Remediation Failed: Post-remediation health verification failed: Telemetry row is stale (95.0s old) | RCA: CPU Spike | Action: RESTART_MONITORING_SERVICE | Verification: FAILED | Telemetry: STALE/UNAVAILABLE | Reason: Telemetry row is stale (95.0s old)
+2026-10-13 03:03:18.319083 | Anomaly | Remediation Failed: Post-remediation health verification failed: Telemetry file unreadable or corrupt | RCA: Disk Failure | Action: SAFE_FALLBACK_RESTART | Verification: FAILED | Telemetry: STALE/UNAVAILABLE | Reason: Telemetry file unreadable or corrupt
+2026-10-13 03:03:19.427887 | Anomaly | Remediation Failed: Post-remediation health verification failed: PID 99999 is not alive in process table | RCA: Collector Deadlock | Action: RESTART_MONITORING_SERVICE | Verification: FAILED | Telemetry: STALE/UNAVAILABLE | Reason: PID 99999 is not alive in process table
+2026-10-13 03:03:19.866255 | Anomaly | Monitoring Service Restarted (PID: 8888) | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: HEALTHY
+2026-10-13 03:03:19.948515 | Normal | No Action Required | Action: NO_ACTION_REQUIRED | Verification: SKIPPED | Telemetry: HEALTHY
+2026-10-13 03:03:20.470698 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: Root Cause Analysis: High CPU saturation and thread starvation. | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 03:03:20.995404 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: Root Cause Analysis: Severe Memory exhaustion and RAM leakage. | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 03:03:21.516654 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: run rm -rf / ; cat /etc/passwd | Action: SAFE_FALLBACK_RESTART | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 03:03:22.038720 | Anomaly | Monitoring Service Restarted (PID: 9999) | RCA: An unexpected transient anomaly pattern was observed. | Action: SAFE_FALLBACK_RESTART | Verification: SUCCESS | Telemetry: STALE/UNAVAILABLE
+2026-10-13 03:03:25 | Fault Injected: CPU_SPIKE | Node(s): VM-03, VM-06 | Metric Trigger: CPU Throttling & Spike (>90%)
+2026-10-13 03:03:25 | Fault Injected: MEMORY_LEAK | Node(s): VM-02, VM-03, VM-06, VM-08 | Metric Trigger: Critical Memory Leak (96%)
+2026-10-13 03:03:25 | Fault Injected: NETWORK_LATENCY | Node(s): VM-01, VM-02, VM-03, VM-06, VM-07, VM-08 | Metric Trigger: Network Latency Degraded (400ms)
+2026-10-13 03:03:25 | Fault Injected: CRITICAL_CRASH | Node(s): VM-01, VM-02, VM-03, VM-06, VM-07, VM-08, VM-09 | Metric Trigger: CRITICAL MODULE CRASH (Node Outage)
+2026-10-13 03:03:25.504988 | Normal | No Action Required | Action: NO_ACTION_REQUIRED | Verification: SKIPPED | Telemetry: HEALTHY
+2026-10-13 03:05:15 | Fault Injected: CPU_SPIKE | Node(s): VM-03, VM-06 | Metric Trigger: CPU Throttling & Spike (>90%)
+2026-10-13 03:05:29.437633 | Anomaly | Monitoring Service Restarted (PID: 2780) | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: HEALTHY
+2026-10-13 03:11:53 | Fault Injected: CPU_SPIKE | Node(s): VM-03, VM-06 | Metric Trigger: CPU Throttling & Spike (>90%)
+2026-10-13 03:11:54.101659 | Anomaly | Monitoring Service Restarted (PID: 3346) | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: HEALTHY
+2026-10-13 03:12:15.959936 | Anomaly | Monitoring Service Restarted (PID: 3387) | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: HEALTHY
+2026-10-13 03:13:33.638564 | Anomaly | Monitoring Service Restarted (PID: 3488) | Action: RESTART_MONITORING_SERVICE | Verification: SUCCESS | Telemetry: HEALTHY

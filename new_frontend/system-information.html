@@ -3,8 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEBULA CORE - System Information</title>
+    <title>AURA HEAL - System Information</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+        :root {
+            --bg-base: #050505;
+            --surface-primary: #0A0A0A;
+            --surface-secondary: #111111;
+            --surface-card: #151515;
+            --surface-card-hover: #1A1A1A;
+            
+            --border-subtle: #262626;
+            --border-light: rgba(255, 255, 255, 0.08);
+            --border-active: rgba(255, 255, 255, 0.35);
+            
+            --text-primary: #FFFFFF;
+            --text-secondary: #A1A1A1;
+            --text-muted: #666666;
+            --text-dim: #444444;
+            
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            
+            --card-radius: 12px;
+            --shadow-subtle: 0 8px 30px rgba(0, 0, 0, 0.7);
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -17,12 +43,33 @@
         }
 
         body {
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: #0b1220;
-            color: #e5edf5;
+            font-family: var(--font-main);
+            background-color: var(--bg-base);
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.04) 0%, transparent 65%),
+                radial-gradient(circle at 100% 100%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-primary);
             overflow-x: hidden;
             overflow-y: auto;
-            letter-spacing: 0.01em;
+            letter-spacing: -0.01em;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Custom Scrollbars */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-base);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #262626;
+            border-radius: 999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #444444;
         }
 
         .header {
@@ -31,8 +78,10 @@
             left: 0;
             right: 0;
             height: 70px;
-            background: #0e1725;
-            border-bottom: 1px solid #1a2c3f;
+            background: rgba(10, 10, 10, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-subtle);
             display: flex;
             align-items: center;
             padding: 0 30px;
@@ -40,14 +89,56 @@
         }
 
         .logo {
-            font-size: 24px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
             font-weight: 700;
-            letter-spacing: 0.08em;
-            color: #98d9ff;
+            letter-spacing: 0.5px;
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        .logo::before {
+            content: "◈";
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: #111111;
+            border: 1px solid var(--border-subtle);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #FFFFFF;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover::before {
+            border-color: #FFFFFF;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
         }
 
         .logo span {
-            color: #f2f7fb;
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .logo::after {
+            content: "OBSERVABILITY";
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            padding: 0.15rem 0.45rem;
+            background: var(--surface-secondary);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-subtle);
+            border-radius: 4px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-left: 4px;
         }
 
         .navbar {
@@ -56,8 +147,10 @@
             left: 0;
             right: 0;
             height: 55px;
-            background: rgba(14, 23, 37, 0.96);
-            border-bottom: 1px solid #1a2c3f;
+            background: rgba(10, 10, 10, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-subtle);
             display: flex;
             align-items: center;
             justify-content: flex-start;
@@ -78,37 +171,47 @@
 
         .navbar a {
             text-decoration: none;
-            color: #9aaac0;
-            padding: 9px 14px;
+            color: var(--text-secondary);
+            padding: 7px 16px;
             border-radius: 6px;
             font-size: 13px;
-            font-weight: 600;
-            transition: all 0.2s ease;
+            font-weight: 500;
+            transition: all 0.15s ease;
             white-space: nowrap;
             flex-shrink: 0;
+            border: 1px solid transparent;
         }
 
         .navbar a:hover {
-            background: #17283c;
-            color: #edf5ff;
+            background: var(--surface-secondary);
+            color: var(--text-primary);
+            border-color: var(--border-subtle);
         }
 
         .navbar a.active {
-            background: #1a2f42;
-            color: #dfefff;
+            background: var(--surface-card);
+            border-color: var(--border-subtle);
+            color: var(--text-primary);
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
         }
 
         .nav-search {
             display: flex;
             align-items: center;
             gap: 8px;
-            background: rgba(7, 17, 31, 0.9);
-            border: 1px solid #233a52;
-            border-radius: 8px;
-            padding: 5px 8px 5px 12px;
-            min-width: min(380px, 32vw);
-            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+            background: var(--surface-secondary);
+            border: 1px solid var(--border-subtle);
+            border-radius: 6px;
+            padding: 4px 6px 4px 12px;
+            min-width: min(340px, 28vw);
             margin-left: auto;
+            transition: all 0.2s ease;
+        }
+
+        .nav-search:focus-within {
+            border-color: var(--border-active);
+            background: var(--surface-card);
         }
 
         .nav-search input {
@@ -116,24 +219,34 @@
             background: transparent;
             border: none;
             outline: none;
-            color: white;
+            color: var(--text-primary);
             font-size: 13px;
             min-width: 0;
+            font-family: var(--font-main);
         }
 
         .nav-search input::placeholder {
-            color: #7d92aa;
+            color: var(--text-muted);
         }
 
         .nav-search button {
-            border: none;
-            background: linear-gradient(135deg, #00a8c7, #00d9ff);
-            color: #041521;
-            padding: 8px 12px;
-            border-radius: 6px;
+            border: 1px solid #FFFFFF;
+            background: #FFFFFF;
+            color: #000000;
+            padding: 6px 14px;
+            border-radius: 5px;
             font-size: 12px;
-            font-weight: bold;
+            font-weight: 600;
             cursor: pointer;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.12);
+            transition: all 0.2s ease;
+            font-family: var(--font-main);
+        }
+
+        .nav-search button:hover {
+            background: #E5E5E5;
+            box-shadow: 0 0 18px rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
         }
 
         .main {
@@ -142,68 +255,82 @@
             left: 0;
             right: 0;
             bottom: 0;
-            padding: 20px 30px;
+            padding: 24px 32px;
             overflow-y: auto;
             overflow-x: hidden;
         }
 
         .page-title {
-            font-size: 28px;
+            font-family: var(--font-heading);
+            font-size: 1.95rem;
             font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 6px;
-            color: #f1f7ff;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            margin-bottom: 4px;
         }
 
         .page-subtitle {
-            color: #8d9eb3;
-            font-size: 14px;
-            margin-bottom: 20px;
+            font-family: var(--font-main);
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            margin-bottom: 22px;
+            line-height: 1.5;
         }
 
         .info-grid {
             display: grid;
             grid-template-columns: 1.5fr 1fr;
-            gap: 18px;
+            gap: 20px;
             max-width: 1100px;
         }
 
         .info-card {
-            background: linear-gradient(180deg, #102131, #0d1a29);
-            border: 1px solid #1d3048;
-            border-radius: 12px;
-            padding: 22px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+            background: var(--surface-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--card-radius);
+            padding: 1.25rem;
+            box-shadow: var(--shadow-subtle);
+            transition: all 0.2s ease;
+        }
+
+        .info-card:hover {
+            border-color: var(--border-active);
         }
 
         .diagnosis-badge {
             display: inline-block;
-            background: rgba(0, 217, 255, 0.12);
-            border: 1px solid rgba(0, 217, 255, 0.5);
-            color: #7be7ff;
-            border-radius: 999px;
-            padding: 5px 10px;
-            margin-bottom: 16px;
+            background: var(--surface-secondary);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-secondary);
+            border-radius: 4px;
+            padding: 4px 10px;
+            margin-bottom: 14px;
             font-size: 10px;
-            letter-spacing: 0.12em;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
-            font-weight: 700;
+            font-weight: 600;
+            font-family: var(--font-mono);
         }
 
         .info-card h3 {
-            font-size: 22px;
-            margin-bottom: 12px;
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: -0.2px;
+            color: var(--text-primary);
+            margin-bottom: 10px;
         }
 
         .info-card p {
-            color: #b7c6d4;
-            line-height: 1.7;
-            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 13px;
         }
 
         .meta-list {
             display: grid;
-            gap: 12px;
+            gap: 10px;
             margin-top: 18px;
         }
 
@@ -212,13 +339,13 @@
             justify-content: space-between;
             gap: 15px;
             padding-bottom: 10px;
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-            color: #bfd0e3;
-            font-size: 14px;
+            border-bottom: 1px solid #1E1E1E;
+            color: var(--text-muted);
+            font-size: 13px;
         }
 
         .meta-item strong {
-            color: #edf7ff;
+            color: var(--text-primary);
             font-weight: 600;
         }
 
@@ -226,42 +353,54 @@
             display: grid;
             grid-template-columns: repeat(3, minmax(150px, 1fr));
             gap: 16px;
-            margin-top: 20px;
+            margin-top: 22px;
             max-width: 1100px;
         }
 
         .metric-box {
-            background: linear-gradient(180deg, #0f1d2e, #0d1825);
-            border: 1px solid #1d3048;
-            border-radius: 12px;
-            padding: 18px 16px;
+            background: var(--surface-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--card-radius);
+            padding: 1.15rem 1.25rem;
             min-height: 108px;
+            box-shadow: var(--shadow-subtle);
+            transition: all 0.2s ease;
+        }
+
+        .metric-box:hover {
+            background: var(--surface-card-hover);
+            border-color: var(--border-active);
+            transform: translateY(-2px);
         }
 
         .metric-box .label {
-            color: #8fa3b8;
-            font-size: 12px;
-            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            font-size: 11px;
+            letter-spacing: 0.06em;
             text-transform: uppercase;
-            margin-bottom: 10px;
+            font-weight: 500;
+            margin-bottom: 8px;
         }
 
         .metric-box .value {
-            font-size: 28px;
+            font-family: var(--font-heading);
+            font-size: 2rem;
             font-weight: 700;
-            color: #f4fbff;
+            color: var(--text-primary);
+            line-height: 1.1;
         }
 
         .metric-box .subtext {
-            margin-top: 8px;
-            color: #86d6ff;
+            margin-top: 6px;
+            color: var(--text-secondary);
             font-size: 12px;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
     <header class="header">
-        <div class="logo">NEBULA <span>CORE</span></div>
+        <div class="logo">AURA <span>HEAL</span></div>
     </header>
 
     <nav class="navbar">

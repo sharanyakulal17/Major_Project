@@ -345,6 +345,7 @@ def backend_overview():
                 font-size: 28px;
                 background: linear-gradient(135deg, #00f2fe, #4facfe);
                 -webkit-background-clip: text;
+                background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
             .badge {
